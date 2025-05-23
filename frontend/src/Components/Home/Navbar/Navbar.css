@@ -1,0 +1,123 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    left: 0; /* Add this to ensure full-width alignment */
+    right: 0;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-family: 'MyLocalFont3', sans-serif;
+    color:aliceblue;
+    text-decoration: none;
+  }
+   
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 70px;
+    margin-left: auto;
+    margin-right: 100px;
+  }
+  
+  .nav-links li {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: transform 0.2s ease-in-out;
+    transform-origin: center center;
+  }
+  
+  .navbar.scrolled {
+    backdrop-filter: blur(10px);
+    background-color: rgba(28, 28, 28, 0.3); /* semi-transparent background */
+  }
+
+  .nav-links li a {
+    color:aliceblue;
+    text-decoration: none;
+   
+  }
+
+  .nav-links li:hover,
+  .nav-links li:focus-within {
+  transform: scale(1.1);
+}
+
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      padding: 0px 0px;
+      padding-top: 50px;
+      padding-bottom: 30px;
+      text-align: center;
+    }
+  
+    .logo {
+      margin-bottom: 10px;
+    }
+  
+    .nav-links {
+      flex-direction: row; /* keep links in a row */
+      gap: 30px; /* smaller gap for phones */
+      margin: 0 auto;
+      padding-top: 30px ;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .nav-links li {
+      font-size: 14px;
+    }
+
+  }
+  
+
+  @media (max-width: 530px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      padding: 0px 0px;
+      padding-top: 50px;
+      padding-bottom: 30px;
+      text-align: center;
+    }
+  
+    .logo {
+      margin-bottom: 10px;
+    }
+  
+    .nav-links {
+      flex-direction: row; 
+      gap: 30px; 
+      margin: 0 auto;
+      padding-top: 30px ;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .nav-links li {
+      font-size: 14px;
+    }
+
+   
+
+  }
+  
