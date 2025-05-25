@@ -65,7 +65,7 @@ const Projects = () => {
     }}>
       <div className="project-card">
         <img 
-          src={project.imageUrl.startsWith('http') ? project.imageUrl : `http://localhost:5000${project.imageUrl}`}
+          src={project.imageUrl.startsWith('http') ? project.imageUrl : `${process.env.REACT_APP_API_URL}${project.imageUrl}`}
           alt={project.title} 
           className="project-image" 
         />

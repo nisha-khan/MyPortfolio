@@ -66,13 +66,13 @@ const ProjectModal = ({ project, onClose }) => {
             <div className="media-grid">
               {project.images?.map((img, index) => (
                 <img key={`img-${index}`}
-                  src={`http://localhost:5000${img}`}
+                  src={`${process.env.REACT_APP_API_URL}${img}`}
                   alt="Project"
                   className="media-item" />
               ))}
               {project.videos?.map((video, index) => (
                 <video key={`vid-${index}`} controls className="media-item">
-                  <source src={`http://localhost:5000${video}`} type="video/mp4" />
+                  <source src={`${process.env.REACT_APP_API_URL}${video}`} type="video/mp4" />
                 </video>
               ))}
             </div>

@@ -23,7 +23,7 @@ const Contact = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/api/contact/contactus', {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/contact/contactus`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
